@@ -1,0 +1,10 @@
+PROJECT_NUMBER="$(gcloud projects list --filter="name:$PROJECT_ID" --format="value(projectId)")"
+VERSION=1.0.0
+COMMIT_SHA=`git rev-parse HEAD`
+CLOUD_BUILD_EMAIL=$PROJECT_NUMBER@cloudbuild.gserviceaccount.com
+
+# setup service account
+SERVICE_ACCOUNT_NAME="selfservicedesk-app"
+CLOUD_BUILD_EMAIL=$PROJECT_NUMBER@cloudbuild.gserviceaccount.com
+
+GCLOUD_STORAGE_BUCKET_NAME=$PROJECT_NUMBER-app

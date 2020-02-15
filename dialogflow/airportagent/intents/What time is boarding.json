@@ -1,0 +1,31 @@
+{
+  "id": "497addd0-4826-424a-8ddf-dcaa2daac76e",
+  "name": "What time is boarding",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": "Passport and security checks and boarding can take longer than expected. Per airport these times may also vary. To prevent delays, we ask that you arrive at both the airport and the gate on time, especially during the busy holiday travel seasons."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

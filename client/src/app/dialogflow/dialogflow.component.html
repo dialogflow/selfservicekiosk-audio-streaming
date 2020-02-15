@@ -1,0 +1,11 @@
+<div class="knowledgebase">
+    <div *ngFor="let f of fulfillment.FULFILLMENTS" class="card" (click)="textToSpeech($event);">
+      <div class="card-inner" tabindex="0">
+          <h3>{{f.QUESTION}}</h3>
+          <div class="answer">
+            {{f.ANSWER}}
+          </div>
+      </div>
+    </div>
+</div>
+  

@@ -1,0 +1,34 @@
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+    .visualizer {
+        display: none;
+    }
+    .utterance {
+        top: -60px !important;
+    }
+}
+  
+.visualizer {
+    height: 80px;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px solid #000;
+    box-shadow: 2px rgba(0,0,0,1);
+    border-radius: 2px;
+}
+
+.utterance {
+    display: block;
+    position: relative;
+    top: -20px;
+    width: 400px;
+    left: 0;
+    color: #fff;
+    font-style: italic;
+    text-align: center;
+}

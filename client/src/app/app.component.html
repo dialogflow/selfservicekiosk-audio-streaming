@@ -1,0 +1,213 @@
+
+
+<div class="wrapper">
+  <div class="flex-grid toolbar" role="banner">
+    <div class="col logo">
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="40"
+      width="44"
+      viewBox="40 0 520 580"
+      version="1.0">
+      <defs
+        id="defs2305" />
+      <g
+        id="g2319"
+        transform="translate(-11.34622,-14.18278)">
+        <path
+          style="fill:#fdfdfd"
+          d="M 65.24074,311.75483 L 65.24074,76.587005 L 300.82685,76.587005 L 536.41295,76.587005 L 536.41295,311.75483 L 536.41295,546.92266 L 300.82685,546.92266 L 65.24074,546.92266 L 65.24074,311.75483 z "
+          id="path2315" />
+        <path
+          style="fill:rgb(39, 38, 38)"
+          d="M 69.85131,593.99848 C 44.424185,591.53143 28.894638,579.0922 22.323616,555.9286 C 20.581661,549.78801 20.499958,538.74753 20.499958,309.5 C 20.499958,82.724487 20.597963,69.117846 22.278561,62.564614 C 24.934442,52.208417 29.745831,43.263196 36.025891,37.005902 C 42.676942,30.378962 48.899241,26.884865 59.530076,23.807263 L 67.499958,21.5 L 306.99996,21.5 C 535.65719,21.5 546.79061,21.582461 552.92,23.321439 C 576.81944,30.101988 588.88393,45.335816 591.97739,72.639194 C 592.77758,79.701729 593.01016,148.62005 592.79698,315.5 L 592.49934,548.5 L 590.31509,556.15411 C 587.26349,566.84757 583.64145,573.49963 577.64881,579.41637 C 571.35749,585.62799 564.62013,589.34073 554.32448,592.2696 L 546.49996,594.4955 L 311.99996,594.61804 C 183.02496,594.68544 74.058066,594.40664 69.85131,593.99848 z M 443.74058,515.75962 C 456.05774,503.4546 462.99601,495.79485 462.98899,494.50962 C 462.98296,493.40433 449.48296,440.33555 432.98899,376.57901 C 416.49502,312.82246 402.99996,259.73155 402.99996,258.59919 C 402.99996,257.21345 421.27411,238.22604 458.89724,200.52018 C 520.95259,138.32838 520.36739,139.02857 520.34363,127 C 520.3281,119.14158 518.52556,114.6104 513.05327,108.67366 C 507.13501,102.25311 500.48134,99.639717 491.54018,100.22387 C 486.99552,100.52079 482.90484,101.48381 479.99996,102.94067 C 476.84583,104.52253 458.85452,121.80981 419.8451,160.74158 L 364.19025,216.28564 L 242.4734,184.0176 L 120.75656,151.74957 L 100.62826,171.92174 C 82.881492,189.70718 80.69731,192.24219 82.167943,193.34722 C 83.085335,194.03655 127.74412,217.75292 181.40969,246.05027 C 235.07526,274.34762 278.98716,297.95211 278.9917,298.50469 C 278.99625,299.05727 261.05551,317.44962 239.1234,339.37659 L 199.24684,379.2438 L 168.04902,375.4579 L 136.8512,371.67199 L 120.93758,387.56228 C 108.54874,399.93298 105.29818,403.70935 106.26197,404.61185 C 106.94286,405.24944 122.34996,413.52272 140.49996,422.99691 C 158.64996,432.4711 174.26138,440.9601 175.192,441.86135 C 176.12262,442.76261 184.77673,458.54411 194.42334,476.93135 C 204.06996,495.31859 212.43143,510.83147 213.00438,511.40442 C 213.72669,512.12673 218.9282,507.54837 229.96802,496.47308 L 245.88993,480.5 L 242.4504,452 C 240.55866,436.325 239.00842,422.16324 239.00542,420.52943 C 239.00068,417.95063 244.17421,412.37848 278.23292,378.27943 C 299.81105,356.67574 318.15941,339 319.00706,339 C 320.03899,339 337.3451,371.38142 371.38274,437 C 399.34172,490.9 422.72664,535 423.34923,535 C 423.97181,535 433.14792,526.34183 443.74058,515.75962 z "
+          id="path2313" />
+      </g>
+    </svg>
+
+    <span class="title">Airport Self Service Kiosk</span>
+    </div>
+    <div class="col"></div>
+    <div class="col link">2020 Lee Boonstra, Developer Advocate, Google Cloud | <a href="http://www.github.com/savelee/selfservicedesk">Github</a></div>
+  </div>
+
+  <div class="flex-grid-parts">
+    <div class="inner">
+      <div class="col side">
+        <app-microphone [waveform]="waveform"></app-microphone>
+        <app-waveform #waveform></app-waveform>
+
+        <div class="card helpbox">
+          <h3>Help</h3>
+          <p>The Airport self service kiosk can help you answering questions.
+            You can ask, what time is boarding is. If you can take a lighter in your hand baggage,
+            what time you should arrive, how to go through security as fast as possible,
+            or present an airport map.
+          </p>
+          <p>
+            Press the <strong>Ask a question</strong> button to start.
+            Tap the answers, to hear the answer.
+          </p>
+       </div>
+      </div>
+      <div class="col content">
+        <app-dialogflow></app-dialogflow>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-grid footer">
+    <div class="col">
+      <button type="button" class="btn mic_button stop_btn" (click)="onReset();">
+        <svg
+            xmlns:svg="http://www.w3.org/2000/svg"
+            height="20"
+            width="24"
+            viewBox="0 0 32 58"
+            id="Capa_1"
+            version="1.1">
+        <g
+            transform="translate(-13)"
+            id="g6">
+          <path
+            id="path2"
+            d="m 44,28 c -0.552,0 -1,0.447 -1,1 v 6 C 43,42.72 36.72,49 29,49 21.28,49 15,42.72 15,35 v -6 c 0,-0.553 -0.448,-1 -1,-1 -0.552,0 -1,0.447 -1,1 v 6 c 0,8.485 6.644,15.429 15,15.949 V 56 h -5 c -0.552,0 -1,0.447 -1,1 0,0.553 0.448,1 1,1 h 12 c 0.552,0 1,-0.447 1,-1 0,-0.553 -0.448,-1 -1,-1 H 30 V 50.949 C 38.356,50.429 45,43.484 45,35 v -6 c 0,-0.553 -0.448,-1 -1,-1 z" />
+          <path
+            id="path4"
+            d="m 29,46 c 6.065,0 11,-4.935 11,-11 V 11 C 40,4.935 35.065,0 29,0 22.935,0 18,4.935 18,11 v 24 c 0,6.065 4.935,11 11,11 z M 20,11 c 0,-4.963 4.038,-9 9,-9 4.962,0 9,4.037 9,9 v 24 c 0,4.963 -4.038,9 -9,9 -4.962,0 -9,-4.037 -9,-9 z" />
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g8">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g10">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g12">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g14">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g16">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g18">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g20">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g22">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g24">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g26">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g28">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g30">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g32">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g34">
+        </g>
+        <g
+            transform="translate(-13)"
+            id="g36">
+        </g>
+        </svg>
+            
+            <span>Next customer</span>
+        </button>
+
+    </div>
+    <div class="col langpick">
+      <span class="langselection">Selected Language: <b>American English</b></span>
+      <ul class="flags">
+        <li>
+          <a href="#" (click)="languageSwitch('en-US', $event);">
+            <img class="flag" src="../assets/en-US.svg" alt="American English" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('en-GB', $event);">
+            <img class="flag" [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/en-GB.svg" alt="British English" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('es-ES', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/es-ES.svg" alt="Spanish" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('pt-PT', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/pt-PT.svg" alt="Portuguese" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('hi-IN', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/hi-IN.svg" alt="Hindi" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('zh-CN', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/zh-CN.svg" alt="Chinese" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('ja-JP', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/ja-JP.svg" alt="Japanese" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('ru-RU', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/ru-RU.svg" alt="Russian" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('fr-FR', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/fr-FR.svg" alt="French" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('de-DE', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/de-DE.svg" alt="German" />
+          </a>
+        </li>
+        <li>
+          <a href="#" (click)="languageSwitch('nl-NL', $event);">
+            <img [ngClass]="isInActive ? 'inactive' : 'active'" src="../assets/nl-NL.svg" alt="Dutch" />
+          </a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+

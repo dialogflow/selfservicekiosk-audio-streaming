@@ -1,0 +1,98 @@
+[
+  {
+    "id": "71ae0383-22cb-4a6f-80ea-7eca10a3945d",
+    "data": [
+      {
+        "text": "When will you start boarding?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "af90dc86-7173-4348-8e12-039b0e0270c4",
+    "data": [
+      {
+        "text": "At what time should I be at the gate?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "bc1e02a8-5cc9-4811-a7b8-9587bbeaa8e3",
+    "data": [
+      {
+        "text": "At what time can we enter the plane?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e76327ec-4feb-47b7-aa9f-20683c9cfaeb",
+    "data": [
+      {
+        "text": "When can we enter the plane?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b1ea64c0-3561-4cb7-bac2-3311f571a0f8",
+    "data": [
+      {
+        "text": "When does the boarding process starts?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4db71b18-aebd-4377-9965-89ab91804811",
+    "data": [
+      {
+        "text": "When do I need to be at the gate?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8a70f055-fa42-439d-a502-a7a95e9d02e1",
+    "data": [
+      {
+        "text": "What time should I board?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "af54b6fb-2623-48bc-9223-838e0e32049a",
+    "data": [
+      {
+        "text": "What time is boarding?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

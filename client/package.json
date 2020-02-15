@@ -71,6 +71,6 @@
     "ts-node": "^8.0.2",
     "tsify": "^4.0.1",
     "tslint": "~5.20.1",
-    "typescript": "^3.5.3"
+    "typescript": "~3.5.3"
   }
 }

@@ -16,13 +16,13 @@ In this demo, you can start recording your voice, it will display answers on a s
 
 # Get a Node.js environment
 
-1. `apt get npm`
+1. `apt-get install nodejs -y`
 
-1. `apt install nodejs-legacy`
+1. `apt-get npm`
 
 # Get an Angular environment
 
-1. `npm install -g @angular/cli`
+1. `sudo npm install -g @angular/cli`
 
 # Clone Repo
 
@@ -70,14 +70,14 @@ It will also deploy a Dialogflow Agent, for intent matching.
 1. Build the client-side Angular app:
     
     ```
-    cd client && npm install
+    cd client && sudo npm install
     npm run-script build
     ```
 
 2. Start the server Typescript app, which is exposed on port 8080:
 
     ```
-    cd ../server && npm install
+    cd ../server && sudo npm install
     npm run-script watch
     ```
 

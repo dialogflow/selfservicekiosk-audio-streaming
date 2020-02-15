@@ -62,14 +62,15 @@ export class App {
                 // request was via https, so do no special handling
                 next();
             } else {
-                    if(req.headers.host != 'localhost:' + App.PORT){
-                        // request was via http, so redirect to https
-                        res.redirect('https://' + req.headers.host + req.url);
-                    } else {
-                        next();
-                    }
+                if(req.headers.host != 'localhost:' + App.PORT && req.headers.host != process.env.EXTERNAL_IP){
+                    // request was via http, so redirect to https
+                    res.redirect('https://' + req.headers.host + req.url)
+                } else {
+                    next();
+                }
             }
 
+console.log()
         });
         this.app.use('/', express.static(path.join(__dirname, '../dist/public')));
     }
@@ -85,7 +86,7 @@ export class App {
     private listen(): void {
         let me = this;
         this.server.listen(App.PORT, () => {
-            console.log('Running server on port %s', App.PORT);
+            console.log('Running server on port: %s', App.PORT);
         });
 
         this.io.on('connect', (client: any) => {

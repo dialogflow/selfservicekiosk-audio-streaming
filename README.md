@@ -10,9 +10,9 @@ Airport SelfServiceDesk demo, to demonstrate how microphone streaming to GCP wor
 
 In this demo, you can start recording your voice, it will display answers on a screen.
 
-![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/tree/master/docs/architecture2.png "Architecture")
+![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/architecture2.png "Architecture")
 
-![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/tree/master/docs/screen.png "Screenshot")
+![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/screen.png "Screenshot")
 
 # Get a Node.js environment
 

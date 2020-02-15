@@ -4,13 +4,27 @@
 
 **By Lee Boonstra, Developer Advocate @ Google Cloud.**
 
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fsavelee%2Fselfservicedesk&cloudshell_tutorial=TUTORIAL.md)
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fdialogflow%2Fselfservicekiosk-audio-streaming&cloudshell_tutorial=TUTORIAL.md)
 
 Airport SelfServiceDesk demo, to demonstrate how microphone streaming to GCP works, from a web application.
 
 In this demo, you can start recording your voice, it will display answers on a screen.
 
-![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/master/docs/architecture2.png "Architecture")
+![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/tree/master/docs/architecture2.png "Architecture")
+
+![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/tree/master/docs/screen.png "Screenshot")
+
+# Get a Node.js environment
+
+1. `apt get npm`
+
+1. `apt install nodejs-legacy`
+
+# Get an Angular environment
+
+1. `npm install -g @angular/cli`
+
+# Clone Repo
 
 1. `git clone https://github.com/dialogflow/selfservicekiosk-audio-streaming.git selfservicekiosk`
 

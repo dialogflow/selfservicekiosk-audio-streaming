@@ -12,7 +12,7 @@ In this demo, you can start recording your voice, it will display answers on a s
 
 ![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/master/docs/architecture2.png "Architecture")
 
-![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/master/docs/screen.png "Screenshot")
+1. `git clone https://github.com/dialogflow/selfservicekiosk-audio-streaming.git selfservicekiosk`
 
 # Setup Local Environment
 

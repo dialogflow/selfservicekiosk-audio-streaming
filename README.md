@@ -18,7 +18,7 @@ In this demo, you can start recording your voice, it will display answers on a s
 
 A working demo can be found here: [http://selfservicedesk.appspot.com/](http://selfservicedesk.appspot.com/)
 
-![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/architecture2.png "Architecture")
+![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/architecture.png "Architecture")
 
 ![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/screen.png "Screenshot")
 

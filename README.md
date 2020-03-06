@@ -2,13 +2,21 @@
 
 # Google Cloud / Dialogflow - Self Service Kiosk Demo
 
-**By Lee Boonstra, Developer Advocate @ Google Cloud.**
-
 [![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fdialogflow%2Fselfservicekiosk-audio-streaming&cloudshell_tutorial=TUTORIAL.md)
 
-Airport SelfServiceDesk demo, to demonstrate how microphone streaming to GCP works, from a web application.
+Airport SelfService Kiosk demo, to demonstrate how microphone streaming to GCP works, from a web application.
 
-In this demo, you can start recording your voice, it will display answers on a screen.
+It makes use of the following GCP resources:
+
+* Dialogflow & Knowledge Bases
+* Speech to Text
+* Text to Speech
+* Translate API
+* (optionally) App Engine Flex
+
+In this demo, you can start recording your voice, it will display answers on a screen and synthesize the speech.
+
+A working demo can be found here: [http://selfservicedesk.appspot.com/](http://selfservicedesk.appspot.com/)
 
 ![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/architecture2.png "Architecture")
 

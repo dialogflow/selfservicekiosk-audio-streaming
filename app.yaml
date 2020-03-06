@@ -1,6 +1,5 @@
 runtime: custom
 env: flex
-service: googleio
 
 network:
     session_affinity: true

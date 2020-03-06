@@ -72,14 +72,17 @@ and (orientation : portrait) {
   align-content: stretch; /* Extra space in Cross Axis */
 }
 
+.col.content {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  height: 100%;
+  width: calc(100% - 450px) !important;
+}
+
 .inner {
   flex: 1;
   display: flex;
-}
-
-.content {
-  overflow: auto;
-  height: 650px;
 }
 
 .flex-grid-parts { 

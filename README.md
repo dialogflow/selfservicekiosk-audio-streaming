@@ -16,11 +16,14 @@ It makes use of the following GCP resources:
 
 In this demo, you can start recording your voice, it will display answers on a screen and synthesize the speech.
 
-A working demo can be found here: [http://selfservicedesk.appspot.com/](http://selfservicedesk.appspot.com/)
-
 ![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/architecture.png "Architecture")
 
 ![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/screen.png "Screenshot")
+
+
+# Live demo
+
+A working demo can be found here: [http://selfservicedesk.appspot.com/](http://selfservicedesk.appspot.com/)
 
 
 # Slides

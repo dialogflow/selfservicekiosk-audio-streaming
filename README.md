@@ -22,43 +22,47 @@ A working demo can be found here: [http://selfservicedesk.appspot.com/](http://s
 
 ![alt text](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/screen.png "Screenshot")
 
-# Get a Node.js environment
+
+# Slides
+
+There's a [presentation](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech) that accompanies the tutorial.
+
+[![Slidedeck AudioStreaming](./docs/images/slidedeck.png)](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech)
+
+# Setup Local Environment
+
+## Get a Node.js environment
 
 1. `apt-get install nodejs -y`
 
 1. `apt-get npm`
 
-# Get an Angular environment
+## Get an Angular environment
 
 1. `sudo npm install -g @angular/cli`
 
-# Clone Repo
+## Clone Repo
 
 1. `git clone https://github.com/dialogflow/selfservicekiosk-audio-streaming.git selfservicekiosk`
 
-# Setup Local Environment
+2. Set the PROJECT_ID variable: export PROJECT_ID=[gcp-project-id]
 
-These steps will deploy a Node JS application with a Angular client, to a cluster with **Cloud Run for Anthos**.
-It will also deploy a Dialogflow Agent, for intent matching.
+3. Set the project: `gcloud config set project $PROJECT_ID`
 
-1. Set the PROJECT_ID variable: export PROJECT_ID=[gcp-project-id]
+4. Download the service account key.
 
-1. Set the project: `gcloud config set project $PROJECT_ID`
-
-1. Download the service account key.
-
-1. Assign the key to environment var: **GOOGLE_APPLICATION_CREDENTIALS**
+5. Assign the key to environment var: **GOOGLE_APPLICATION_CREDENTIALS**
 
  LINUX/MAC
  `export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service_account.json`
  WIN
  `set GOOGLE_APPLICATION_CREDENTIALS=c:\keys\key-ssd.json`
 
-1. Login: `gcloud auth login`
+6. Login: `gcloud auth login`
 
-1. Open **env.txt**, change the environment variables and rename the file to **.env**
+7. Open **env.txt**, change the environment variables and rename the file to **.env**
 
-1. Enable APIs:
+8. Enable APIs:
 
  ```
   gcloud services enable \
@@ -75,14 +79,14 @@ It will also deploy a Dialogflow Agent, for intent matching.
   translate.googleapis.com
 ```
 
-1. Build the client-side Angular app:
+9. Build the client-side Angular app:
     
     ```
     cd client && sudo npm install
     npm run-script build
     ```
 
-2. Start the server Typescript app, which is exposed on port 8080:
+10. Start the server Typescript app, which is exposed on port 8080:
 
     ```
     cd ../server && sudo npm install
@@ -127,7 +131,7 @@ It will also deploy a Dialogflow Agent, for intent matching.
     $Knowledge.Answer[1]
     ```
 
-## Deploy with App Engine Flex
+# Deploy with App Engine Flex
 
 This demo makes heavy use of websockets and
 the microphone `getUserMedia()` HTML5 API requires

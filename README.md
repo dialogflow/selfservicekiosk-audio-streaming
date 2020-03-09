@@ -4,6 +4,8 @@
 
 [![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fdialogflow%2Fselfservicekiosk-audio-streaming&cloudshell_tutorial=TUTORIAL.md)
 
+A best practice for streaming audio from a browser microphone to Dialogflow or Google Cloud STT by using websockets.
+
 Airport SelfService Kiosk demo, to demonstrate how microphone streaming to GCP works, from a web application.
 
 It makes use of the following GCP resources:

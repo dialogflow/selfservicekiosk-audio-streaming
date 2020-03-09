@@ -150,4 +150,36 @@ Set the correct Project ID.
 
 1. Browse: `gcloud app browse`
 
- 
+
+# Examples
+
+The selfservice kiosk is a full end to end application.
+To showcase smaller examples, I've created 6 small demos. Here's how you can get these running:
+
+1. Install the required libraries, run the following command from the *examples* folder:
+
+    `npm install`
+
+2. Start the simpleserver node app:
+
+   `npm --EXAMPLE=1 --PORT=8080 --PROJECT_ID=[your-gcp-project-id] run start`
+
+To switch to the various examples, edit the EXAMPLE variable to one of these:
+
+* Example **1**: Dialogflow Speech Intent Detection
+* Example **2**: Dialogflow Speech Detection through streaming
+* Example **3**: Dialogflow Speech Intent Detection with Text to Speech output
+* Example **4**: Speech to Text Transcribe Recognize Call
+* Example **5**: Speech to Text Transcribe Streaming Recognize
+* Example **6**: Text to Speech in a browser
+
+3. Browse to http://localhost:8080. Open the inspector, to preview the
+Dialogflow results object.
+
+The code required for these examples can be found in **simpleserver.js** for the different Dialogflow & STT calls. - **example1.html** - **example5.html** will show the client-side implementations.
+
+# License
+
+Apache 2.0
+
+This is not an official Google product.

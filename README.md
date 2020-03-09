@@ -27,7 +27,7 @@ A working demo can be found here: [http://selfservicedesk.appspot.com/](http://s
 
 There's a [presentation](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech) that accompanies the tutorial.
 
-[![Slidedeck AudioStreaming]([[./docs/images/slidedeck.png](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/slidedeck.png))](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech)
+[![Slidedeck AudioStreaming](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/slidedeck.png)](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech)
 
 # Setup Local Environment
 

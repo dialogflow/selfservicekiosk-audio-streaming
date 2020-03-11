@@ -35,7 +35,14 @@
             <button id="start-recording" disabled>Start Recording</button>
             <button id="stop-recording" disabled>Stop Recording</button>
         </div>
-        <h2 style="font-size: 14px;">Results: data[0].queryResult.fulfillmentText</h2>
+        <h2 style="font-size: 16px; margin-bottom: 10px;">Query Text</h2>
+        <code>data[0].queryResult.queryText</code><br/>
+        <input id="queryText" type="text" style="width: 400px;"/>
+        <h2 style="font-size: 16px; margin-bottom: 10px;">Intent</h2>
+        <code>data[0].queryResult.intent.displayName</code><br/>
+        <input id="intent" type="text" style="width: 400px;"/>
+        <h2 style="font-size: 16px;">Responses</h2>
+        <code>data[0].queryResult.fulfillmentText</code><br/>
         <textarea id="results" style="width: 800px; height: 300px;"></textarea>
     </div>
     <script type="text/javascript">
@@ -115,11 +122,15 @@
     // when the server found results send
     // it back to the client
     const resultpreview = document.getElementById('results');
+    const intentInput = document.getElementById('intent');
+    const textInput = document.getElementById('queryText');
     socketio.on('results', function (data) {
         console.log(data);
         // show the results on the screen
         if(data[0].queryResult){
             resultpreview.innerHTML += "" + data[0].queryResult.fulfillmentText;
+            intentInput.value = data[0].queryResult.intent.displayName;
+            textInput.value = "" + data[0].queryResult.queryText;
         }
     });
     </script>

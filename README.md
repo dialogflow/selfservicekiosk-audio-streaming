@@ -28,9 +28,9 @@ In this demo, you can start recording your voice, it will display answers on a s
 A working demo can be found here: [http://selfservicedesk.appspot.com/](http://selfservicedesk.appspot.com/)
 
 
-# Slides
+# Slides & Video
 
-There's a [presentation](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech) that accompanies the tutorial.
+There's a [presentation](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech) and a [video](https://youtu.be/6JD8WC1LV7g) that accompanies the tutorial.
 
 [![Slidedeck AudioStreaming](https://github.com/dialogflow/selfservicekiosk-audio-streaming/blob/master/docs/slidedeck.png)](https://speakerdeck.com/savelee/implementing-a-custom-ai-voice-assistant-by-streaming-webrtc-to-dialogflow-and-cloud-speech)
 

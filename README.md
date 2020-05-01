@@ -80,6 +80,7 @@ There's a [presentation](https://speakerdeck.com/savelee/implementing-a-custom-a
   monitoring.googleapis.com \
   sourcerepo.googleapis.com \
   speech.googleapis.com \
+  mediatranslation.googleapis.com \
   texttospeech.googleapis.com \
   translate.googleapis.com
 ```

@@ -28,9 +28,24 @@ if(example > 3){
   encoding = 'LINEAR16';
 }
 
+console.log(example);
+if(example == 7){
+  // NOTE: ENCODING NAMING FOR SPEECH API IS DIFFERENT
+  encoding = 'linear16';
+}
+
 const singleUtterance = true;
 const interimResults = false;
 const sampleRateHertz = 16000;
+const speechContexts = [
+  {
+    phrases: [
+      'mail',
+      'email'
+    ],
+    boost: 20.0
+  }
+]
 
 console.log(example);
 console.log(projectId);
@@ -57,7 +72,7 @@ const df = require('dialogflow').v2beta1;
 const app = express();
 var server;
 var sessionId, sessionClient, sessionPath, request;
-var speechClient, requestSTT, ttsClient, requestTTS;
+var speechClient, requestSTT, ttsClient, requestTTS, mediaTranslationClient, requestMedia;
 
 // STT demo
 const speech = require('@google-cloud/speech');
@@ -65,6 +80,8 @@ const speech = require('@google-cloud/speech');
 // TTS demo
 const textToSpeech = require('@google-cloud/text-to-speech');
 
+// Media Translation Demo
+const mediatranslation = require('@google-cloud/media-translation');
 
 /**
  * Setup Express Server with CORS and SocketIO
@@ -146,7 +163,21 @@ function setupServer() {
           }).catch(function(e){
             console.log(e);
           });
-      });
+        });
+
+        // when the client sends 'stream-media' events
+        // when using audio streaming
+        ss(client).on('stream-media', function(stream, data) {
+          // get the name of the stream
+          const filename = path.basename(data.name);
+          // pipe the filename to the stream
+          stream.pipe(fs.createWriteStream(filename));
+          // make a detectIntStream call
+          transcribeAudioMediaStream(stream, function(results){
+              console.log(results);
+              client.emit('results', results);
+          });
+        });
     });
 }
 
@@ -176,7 +207,8 @@ function setupDialogflow(){
         audioConfig: {
           sampleRateHertz: sampleRateHertz,
           encoding: encoding,
-          languageCode: languageCode
+          languageCode: languageCode,
+          speechContexts: speechContexts
         },
         singleUtterance: singleUtterance
       }
@@ -209,6 +241,21 @@ function setupSTT(){
       //model: `phone_call`
     }
 
+}
+
+/*
+ * Setup Media Translation
+ */
+function mediaTranslation(){
+  mediaTranslationClient = new mediatranslation.SpeechTranslationServiceClient();
+
+  // Create the initial request object
+  console.log(encoding);
+  requestMedia = {
+    audioEncoding: encoding,
+    sourceLanguageCode: 'en-US',
+    targetLanguageCode: 'de-DE'
+  }
 }
 
 /**
@@ -311,6 +358,72 @@ function setupTTS(){
   return responses;
 }
 
+
+/*
+  * Media Translation Stream
+  * @param audio stream
+  * @param cb Callback function to execute with results
+  */
+ async function transcribeAudioMediaStream(audio, cb) { 
+  var isFirst = true;
+  
+  const initialRequest = {
+    streamingConfig: {
+      audioConfig: requestMedia,
+      audioContent: null
+    }
+  }
+  
+  audio.on('data', chunk => {
+    if (isFirst) {
+      console.log('one time');
+      stream.write(initialRequest);
+      isFirst = false;
+      console.log(initialRequest);
+    }
+    console.log('other times');
+    const request = {
+      streamingConfig: {
+        audioConfig: requestMedia
+      },
+      audioContent: chunk.toString('base64')
+    };
+    console.log(request);
+    //console.log(request);
+    stream.write(request);
+  });
+
+  const stream = mediaTranslationClient.streamingTranslateSpeech()
+  .on('data', function(response){
+    console.log('results');
+    console.log(response);
+    // when data comes in
+    // log the intermediate transcripts
+    const {result} = response;
+    if (result.textTranslationResult.isFinal) {
+      console.log(
+        `\nFinal translation: ${result.textTranslationResult.translation}`
+      );
+      console.log(`Final recognition result: ${result.recognitionResult}`);
+      cb(result);
+    } else {
+      /*console.log(
+        `\nPartial translation: ${result.textTranslationResult.translation}`
+      );
+      console.log(
+        `Partial recognition result: ${result.recognitionResult}`
+      );*/
+    }
+  })
+  .on('error', (e) => {
+    //console.log(e);
+  })
+  .on('end', () => {
+    console.log('on end');
+  });
+
+};
+
  /*
   * STT - Transcribe Speech on Audio Stream
   * @param audio stream
@@ -350,4 +463,5 @@ async function textToAudioBuffer(text) {
 setupDialogflow();
 setupSTT();
 setupTTS();
+mediaTranslation();
 setupServer();

@@ -33,7 +33,7 @@ To switch to the various examples, edit the EXAMPLE variable to one of these:
 * Example **4**: Speech to Text Transcribe Recognize Call
 * Example **5**: Speech to Text Transcribe Streaming Recognize
 * Example **6**: Text to Speech in a browser
-
+* Example **7**: Media Translation Speech Streaming
 
 1. Browse to http://localhost:8080. Open the inspector, to preview the
 Dialogflow results object.

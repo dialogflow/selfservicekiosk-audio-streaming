@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "@google-cloud/media-translation": "^2.0.0",
     "@google-cloud/speech": "^3.5.3",
     "@google-cloud/text-to-speech": "^2.1.0",
     "cors": "^2.8.5",

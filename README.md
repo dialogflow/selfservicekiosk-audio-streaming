@@ -32,12 +32,9 @@ A working demo can be found here: [http://selfservicedesk.appspot.com/](http://s
 
 I wrote very extensive blog articles on how to setup your streaming project. Want to exactly learn how this code works? Have a start here:
 
-Blog 1: [Introduction to the GCP conversational AI components, and integrating your own voice AI in a web app.](https://medium.com/@ladysign/building-your-own-conversational-voice-ai-with-dialogflow-speech-to-text-in-web-apps-part-i-b92770bd8b47)
-
-Blog 2: [Building a client-side web application which streams audio from a browser microphone to a server.](https://medium.com/@ladysign/building-a-client-side-web-app-which-streams-audio-from-a-browser-microphone-to-a-server-part-ii-df20ddb47d4e)
-
-Blog 3: [Building a web server which receives a browser microphone stream and uses Dialogflow or the Speech to Text API for retrieving text results.](https://medium.com/google-cloud/building-a-web-server-which-receives-a-browser-microphone-stream-and-uses-dialogflow-or-the-speech-62b47499fc71)
-
+Blog 1: [Introduction to the GCP conversational AI components, and integrating your own voice AI in a web app.](https://medium.com/@ladysign/building-your-own-conversational-voice-ai-with-dialogflow-speech-to-text-in-web-apps-part-i-b92770bd8b47)  
+Blog 2: [Building a client-side web application which streams audio from a browser microphone to a server.](https://medium.com/@ladysign/building-a-client-side-web-app-which-streams-audio-from-a-browser-microphone-to-a-server-part-ii-df20ddb47d4e)  
+Blog 3: [Building a web server which receives a browser microphone stream and uses Dialogflow or the Speech to Text API for retrieving text results.](https://medium.com/google-cloud/building-a-web-server-which-receives-a-browser-microphone-stream-and-uses-dialogflow-or-the-speech-62b47499fc71)  
 Blog 4: [Getting Audio Data from Text (Text to Speech) and play it in your browser.](https://medium.com/@ladysign/getting-audio-data-from-text-text-to-speech-and-play-it-in-your-browser-part-iv-cd2d6ea71c6a)
 
 # Slides & Video

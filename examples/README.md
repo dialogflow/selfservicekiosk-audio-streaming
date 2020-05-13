@@ -13,7 +13,7 @@ Here are the steps, to run these examples locally:
 
 1. Get this repo running locally:
    
-   Follow the steps from https://github.com/savelee/selfservicedesk/README.md. You can skip the Deploy with AppEngine steps.
+   Follow the steps from https://github.com/dialogflow/selfservicekiosk-audio-streaming/README.md. You can skip the Deploy with AppEngine steps.
 
    These steps will: setup a Google Cloud Project, enable Google Cloud APIs, setup a service account and setup a Dialogflow Agent.
 

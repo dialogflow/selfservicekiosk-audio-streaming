@@ -50,7 +50,7 @@
     "concurrently": "^5.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.1",

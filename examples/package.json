@@ -20,7 +20,7 @@
     "dialogflow": "^0.14.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "pb-util": "^0.1.2",
     "recordrtc": "latest",
     "socket.io": "^2.3.0",

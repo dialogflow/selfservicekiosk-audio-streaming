@@ -27,7 +27,7 @@
     "node-typescript": "^0.1.3",
     "pb-util": "^0.1.2",
     "recordrtc": "latest",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "socket.io-stream": "^0.9.1",
     "source-map-support": "^0.5.16",
     "stream": "0.0.2",

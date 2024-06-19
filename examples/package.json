@@ -23,7 +23,7 @@
     "node-fetch": "^2.6.0",
     "pb-util": "^0.1.2",
     "recordrtc": "latest",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "socket.io-stream": "^0.9.1",
     "stream": "0.0.2",
     "through2": "^3.0.1",

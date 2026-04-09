@@ -79,13 +79,13 @@ GOOGLE_APPLICATION_CREDENTIALS=../master.json
 ACCESS_TOKEN="$(gcloud auth application-default print-access-token)"
 
 bold "Creating Storage bucket..."
-gsutil mb gs://$GCLOUD_STORAGE_BUCKET_NAME/
+gcloud storage buckets create gs://$GCLOUD_STORAGE_BUCKET_NAME/
 
 bold "Zipping Intents..."
 zip -r dialogflow/airportagent/agent.zip dialogflow/airportagent
 
 bold "Uploading Intents to $GCLOUD_STORAGE_BUCKET_NAME..."
-gsutil cp dialogflow/agent/agent.zip gs://$GCLOUD_STORAGE_BUCKET_NAME/
+gcloud storage cp dialogflow/agent/agent.zip gs://$GCLOUD_STORAGE_BUCKET_NAME/
 
 bold "Create a Dialogflow Agent..."
 echo $ACCESS_TOKEN
